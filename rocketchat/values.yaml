@@ -1,0 +1,25 @@
+rocketchat:
+  prometheusScraping:
+    enabled: false
+cert-manager:
+  installCRDs: true
+external-dns:
+  extraArgs:
+    source:
+      "ingress" # service is also possible
+    provider:
+      "godaddy"
+    godaddy-api-key:
+      "$GODADDY_API_KEY" # need to modify var name here and in dns-creds secret in case you change 'provider'
+    godaddy-api-secret:
+      "$GODADDY_SECRET_KEY" # need to modify var name here and in dns-creds secret in case you change 'provider'
+  extraEnvVarsSecret: dns-creds
+
+infra:
+  enabled: false
+app:
+  enabled: false
+
+environment: "staging"
+tlsCertEmail: "yourname@example.com"
+hostname: mydemo.edgeless.systems
