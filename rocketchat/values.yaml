@@ -14,6 +14,11 @@ external-dns:
     godaddy-api-secret:
       "$GODADDY_SECRET_KEY" # need to modify var name here and in dns-creds secret in case you change 'provider'
   extraEnvVarsSecret: dns-creds
+ingress-nginx:
+  controller:
+    service:
+      annotations:
+        service.beta.kubernetes.io/azure-load-balancer-health-probe-request-path: "/healthz"
 
 infra:
   enabled: false
