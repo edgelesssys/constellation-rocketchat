@@ -1,8 +1,6 @@
 rocketchat:
   prometheusScraping:
     enabled: false
-cert-manager:
-  installCRDs: true
 external-dns:
   extraArgs:
     source:
