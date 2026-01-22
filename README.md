@@ -1,5 +1,12 @@
 # General
 
+> [!IMPORTANT]
+> **Constellation is no longer actively maintained by Edgeless Systems.**
+> 
+> This project is no longer receiving updates or support from Edgeless Systems. The repository remains available for archival purposes and community use.
+> New development continues in Contrast, which provides workload-level confidential computing using Confidential Containers.
+> 👉 https://github.com/edgelesssys/contrast
+
 Deploys the rocket-chat helm [chart](https://artifacthub.io/packages/helm/rocketchat-server/rocketchat).
 Also deploys TLS issuers to the respective namespace and an Ingress for TLS.
 # Deploy
